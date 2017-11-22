@@ -20,5 +20,3 @@ galaxy_info:
     - repository
     - ldp
     - installer
-dependencies:
-  - { role: islandora.tomcat8 }
