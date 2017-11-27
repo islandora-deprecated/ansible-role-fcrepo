@@ -47,6 +47,8 @@ fcrepo_data_dir: "{{ fcrepo_home_dir }}/fcrepo4-data"
 ## Dependencies
 
 * Islandora-Devops.tomcat8
+     * [Github](https://github.com/Islandora-Devops/ansible-role-tomcat8)
+     * [Galaxy](https://galaxy.ansible.com/Islandora-Devops/tomcat8/)
   
 ## Example Playbook
 
