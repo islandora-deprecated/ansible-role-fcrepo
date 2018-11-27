@@ -60,8 +60,8 @@ This role only uses the fcrepo_data_dir to create a directory. To tell Fedora
 to use this directory you either need to incorporate the value into the
 [repository.json template](templates/repository.json) or add it to the Tomcat
 Java Opts. For example, if using
-[ansible-role-tomcat8](/Islandora-Devops/ansible-role-tomcat8) adding the
-following to your inventory:
+[ansible-role-tomcat8](https://github.com/Islandora-Devops/ansible-role-tomcat8)
+adding the following to your inventory:
 ```
 fcrepo_data_dir: "/data/fcrepo-data"
 
