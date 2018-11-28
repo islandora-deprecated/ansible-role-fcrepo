@@ -19,7 +19,7 @@ User with permissions to install:
 fcrepo_user: {{ tomcat8_server_user }}
 ```
 
-Path to put Fedora data directory
+Path to put Fedora data directory (see the notes section below)
 ```
 fcrepo_data_dir: /var/lib/tomcat8/fcrepo4-data
 ```
@@ -53,6 +53,21 @@ fcrepo_config_dir: "{{ fcrepo_home_dir }}/configs"
     - hosts: webservers
       roles:
         - { role: islandora.fcrepo }
+
+## Notes
+
+This role only uses the fcrepo_data_dir to create a directory. To tell Fedora
+to use this directory you either need to incorporate the value into the
+[repository.json template](templates/repository.json) or add it to the Tomcat
+Java Opts. For example, if using
+[ansible-role-tomcat8](https://github.com/Islandora-Devops/ansible-role-tomcat8)
+adding the following to your inventory:
+```
+fcrepo_data_dir: "/data/fcrepo-data"
+
+tomcat8_java_opts:
+  - -Dfcrepo.binary.directory={{ fcrepo_data_dir }}
+```
 
 ## License
 
