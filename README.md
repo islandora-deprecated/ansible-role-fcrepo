@@ -44,6 +44,19 @@ Where the configurations are stored
 fcrepo_config_dir: "{{ fcrepo_home_dir }}/configs"
 ```
 
+Path to put Fedora data directory
+```
+fcrepo_data_dir: "{{ fcrepo_home_dir }}/fcrepo4-data"
+```
+
+Islandora uses the HeaderProvider to pass the users roles into Fedora. To use this you will need to set the below variable.
+
+Header name to acquire roles from
+```
+fcrepo_auth_header_name:
+```
+
+
 ## Dependencies
 
 * islandora.tomcat8

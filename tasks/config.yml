@@ -7,6 +7,7 @@
   with_items:
     - claw.cnd
     - repository.json
+    - fcrepo-config.xml
   notify: restart tomcat8
 
 - name: Copy fedora activemq configuration
