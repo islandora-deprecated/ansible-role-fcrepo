@@ -56,6 +56,19 @@ Header name to acquire roles from
 fcrepo_auth_header_name:
 ```
 
+Islandora takes advantage of fcrepo's external content feature.  To enable redirects / proxying, you need to configure:
+
+Where the config file gets stored:
+```
+fcrepo_allowed_external_content_file: "{{ fcrepo_config_dir }}/allowed-external-content.txt"
+```
+
+What paths/urls to expose:
+```
+fcrepo_allowed_external_content:
+  - http://localhost:8000/
+```
+
 
 ## Dependencies
 
