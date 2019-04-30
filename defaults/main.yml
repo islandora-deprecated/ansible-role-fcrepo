@@ -5,4 +5,12 @@ fcrepo_war_path: "{{ tomcat8_home }}/webapps/fcrepo.war"
 fcrepo_home_dir: /opt/fcrepo
 fcrepo_activemq_template: activemq.xml.j2
 fcrepo_config_dir: "{{ fcrepo_home_dir }}/configs"
+
+# External content paths can be directories or urls,
+# and they MUST end in /
+fcrepo_allowed_external_content:
+  - http://localhost:8000/
+
+fcrepo_allowed_external_content_file: "{{ fcrepo_config_dir }}/allowed-external-content.txt"
+
 fcrepo_auth_header_name:

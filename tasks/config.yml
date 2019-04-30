@@ -17,3 +17,11 @@
     owner: "{{ fcrepo_user }}"
     group: "{{ fcrepo_user }}"
   notify: restart tomcat8
+
+- name: Template out allowed external content paths
+  template:
+    src: allowed-external-content.txt.j2
+    dest: "{{ fcrepo_allowed_external_content_file }}"
+    owner: "{{ fcrepo_user }}"
+    group: "{{ fcrepo_user }}"
+  notify: restart tomcat8
