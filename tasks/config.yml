@@ -11,7 +11,7 @@
 
 - name: Copy templated repository.json
   template:
-    src: {{ fcrepo_persistence }}-repository.json
+    src: "{{ fcrepo_persistence }}-repository.json"
     dest: "{{ fcrepo_home_dir }}/configs/repository.json"
     owner: "{{ fcrepo_user }}"
     group: "{{ fcrepo_user }}"
