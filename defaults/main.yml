@@ -6,6 +6,14 @@ fcrepo_home_dir: /opt/fcrepo
 fcrepo_activemq_template: activemq.xml.j2
 fcrepo_config_dir: "{{ fcrepo_home_dir }}/configs"
 
+# For production use either "jdbc-mysql" or "jdbc-postgresql"
+fcrepo_persistence: file-simple
+
+# Used for mysql or postgres object persistence. Please change the password locally!
+fcrepo_db_name: fcrepo
+fcrepo_db_user: fcrepo
+fcrepo_db_password: fcrepo
+
 # External content paths can be directories or urls,
 # and they MUST end in /
 fcrepo_allowed_external_content:

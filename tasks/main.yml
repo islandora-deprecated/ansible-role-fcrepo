@@ -3,6 +3,21 @@
     - fcrepo
     - fcrepo-install
 
+- include: db-mysql.yml
+  when: fcrepo_persistence == 'jdbc-mysql'
+  tags:
+    - fedora
+    - fedora-install
+    - fedora-db
+
+- include: db-pgsql.yml
+  when: fcrepo_persistence == 'jdbc-postgresql'
+  become: yes
+  tags:
+    - fedora
+    - fedora-install
+    - fedora-db
+
 - include: config.yml
   tags:
     - fcrepo
