@@ -49,9 +49,19 @@ Path to put Fedora data directory
 fcrepo_data_dir: "{{ fcrepo_home_dir }}/fcrepo4-data"
 ```
 
+Path to put the Fedora data binaries directory
+```
+fcrepo_binary_directory: "{{ fcrepo_data_dir}}/binaries"
+```
+
 Which Fedora object persistence configuration to use
 ```
 fcrepo_persistence: file-simple
+```
+
+If 'file-simple persistence' is used (default), where to keep the modeshape repository file
+```
+fcrepo_object_directory: "{{ fcrepo_data_dir}}/objects"
 ```
 
 If either 'jdbc-mysql' or 'jdbc-postgres' are used for object persistence, the database settings
@@ -59,6 +69,8 @@ If either 'jdbc-mysql' or 'jdbc-postgres' are used for object persistence, the d
 fcrepo_db_name: fcrepo
 fcrepo_db_user: fcrepo
 fcrepo_db_password: fcrepo
+fcrepo_db_host: "127.0.0.1"
+fcrepo_db_port: "3306"
 ```
 
 Islandora uses the HeaderProvider to pass the users roles into Fedora. To use this you will need to set the below variable.

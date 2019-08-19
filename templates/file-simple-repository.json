@@ -9,11 +9,11 @@
     "storage" : {
         "persistence": {
             "type": "file",
-            "path" : "${fcrepo.object.directory:target/objects}"
+            "path" : "{{ fcrepo_object_directory }}"
         },
         "binaryStorage" : {
             "type" : "file",
-            "directory" : "${fcrepo.binary.directory:target/binaries}",
+            "directory" : "{{ fcrepo_binary_directory }}",
             "minimumBinarySizeInBytes" : 4096
         }
     },

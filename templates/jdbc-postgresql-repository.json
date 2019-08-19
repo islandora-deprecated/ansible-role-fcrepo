@@ -10,14 +10,14 @@
     "storage" : {
         "persistence": {
             "type" : "db",
-            "connectionUrl": "jdbc:postgresql://${fcrepo.postgresql.host:localhost}:${fcrepo.postgresql.port:5432}/fcrepo",
+            "connectionUrl": "jdbc:postgresql://{{ fcrepo_db_host }}:{{ fcrepo_db_port }}/{{ fcrepo_db_name }}",
             "driver" : "org.postgresql.Driver",
-            "username" : "${fcrepo.postgresql.username}",
-            "password" : "${fcrepo.postgresql.password}"
+            "username" : "{{ fcrepo_db_user }}",
+            "password" : "{{ fcrepo_db_password }}"
         },
         "binaryStorage" : {
             "type" : "file",
-            "directory" : "${fcrepo.binary.directory:target/binaries}",
+            "directory" : "{{ fcrepo_binary_directory }}",
             "minimumBinarySizeInBytes" : 4096
         }
     },
