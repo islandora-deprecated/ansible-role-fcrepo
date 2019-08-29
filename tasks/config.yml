@@ -6,8 +6,15 @@
     group: "{{ fcrepo_user }}"
   with_items:
     - claw.cnd
-    - repository.json
     - fcrepo-config.xml
+  notify: restart tomcat8
+
+- name: Copy templated repository.json
+  template:
+    src: "{{ fcrepo_persistence }}-repository.json"
+    dest: "{{ fcrepo_home_dir }}/configs/repository.json"
+    owner: "{{ fcrepo_user }}"
+    group: "{{ fcrepo_user }}"
   notify: restart tomcat8
 
 - name: Copy fedora activemq configuration

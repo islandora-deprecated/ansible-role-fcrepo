@@ -1,10 +1,24 @@
 fcrepo_version: 4.7.2
 fcrepo_user: "{{ tomcat8_server_user }}"
 fcrepo_data_dir: /var/lib/tomcat8/fcrepo4-data
+fcrepo_binary_directory: "{{ fcrepo_data_dir}}/binaries"
 fcrepo_war_path: "{{ tomcat8_home }}/webapps/fcrepo.war"
 fcrepo_home_dir: /opt/fcrepo
 fcrepo_activemq_template: activemq.xml.j2
 fcrepo_config_dir: "{{ fcrepo_home_dir }}/configs"
+
+# For file-simple object persistence.
+fcrepo_object_directory: "{{ fcrepo_data_dir}}/objects"
+
+# For production use either "jdbc-mysql" or "jdbc-postgresql"
+fcrepo_persistence: file-simple
+
+# Used for mysql or postgres object persistence. Please change the password locally!
+fcrepo_db_name: fcrepo
+fcrepo_db_user: fcrepo
+fcrepo_db_password: fcrepo
+fcrepo_db_host: "127.0.0.1"
+fcrepo_db_port: "3306"
 
 # External content paths can be directories or urls,
 # and they MUST end in /
