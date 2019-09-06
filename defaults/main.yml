@@ -1,4 +1,4 @@
-fcrepo_version: 4.7.2
+fcrepo_version: 5.1.0
 fcrepo_user: "{{ tomcat8_server_user }}"
 fcrepo_data_dir: /var/lib/tomcat8/fcrepo4-data
 fcrepo_binary_directory: "{{ fcrepo_data_dir}}/binaries"

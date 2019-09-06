@@ -1,9 +1,11 @@
-# Ansible Role: Fedora 4
+# Ansible Role: Fedora
 
 An Ansible role that installs Fedora 4 in a Tomcat 8 servlet container on:
 
 * Centos/RHEL 7.x
 * Ubuntu Xenial
+
+This role has been tested with Fedora 4.7.* and 5.*.*.
 
 ## Role Variables
 
@@ -97,7 +99,7 @@ fcrepo_allowed_external_content:
 ## Dependencies
 
 * islandora.tomcat8
-  
+ 
 ## Example Playbook
 
     - hosts: webservers
