@@ -19,6 +19,9 @@ fcrepo_db_user: fcrepo
 fcrepo_db_password: fcrepo
 fcrepo_db_host: "127.0.0.1"
 fcrepo_db_port: "3306"
+# user that has database create and user add privs.
+fcrepo_db_root_user: "root"
+fcrepo_db_root_password: ""
 
 # External content paths can be directories or urls,
 # and they MUST end in /

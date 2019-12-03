@@ -25,6 +25,7 @@
     group: "{{ fcrepo_user }}"
   notify: restart tomcat8
 
+# ADDED by dbernstein
 - name: Template out allowed external content paths
   template:
     src: allowed-external-content.txt.j2
