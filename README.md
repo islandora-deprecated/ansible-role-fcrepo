@@ -1,6 +1,6 @@
 # Ansible Role: Fedora
 
-An Ansible role that installs Fedora 4 in a Tomcat 8 servlet container on:
+An Ansible role that installs Fedora 5 in a Tomcat 8 servlet container on:
 
 * Centos/RHEL 7.x
 * Ubuntu Xenial
@@ -13,7 +13,7 @@ Available variables are listed below, along with default values:
 
 Version of Fedora to install
 ```
-fcrepo_version: 4.7.2
+fcrepo_version: 5.1.0
 ```
 
 User with permissions to install:
