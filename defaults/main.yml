@@ -5,6 +5,7 @@ fcrepo_binary_directory: "{{ fcrepo_data_dir}}/binaries"
 fcrepo_war_path: "{{ tomcat8_home }}/webapps/fcrepo.war"
 fcrepo_home_dir: /opt/fcrepo
 fcrepo_activemq_template: activemq.xml.j2
+fcrepo_activemq_broker_url: "tcp://localhost:61616"
 fcrepo_config_dir: "{{ fcrepo_home_dir }}/configs"
 
 # For file-simple object persistence.
@@ -21,7 +22,7 @@ fcrepo_db_host: "127.0.0.1"
 fcrepo_db_port: "3306"
 # user that has database create and user add privs.
 fcrepo_db_root_user: "root"
-fcrepo_db_root_password: ""
+fcrepo_db_root_password: "islandora"
 
 # External content paths can be directories or urls,
 # and they MUST end in /
