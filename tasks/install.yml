@@ -54,7 +54,7 @@
   yum:
     name:
       - python-psycopg2
-      - python-mysqldb
-      - mysql-client
+      - MySQL-python
+      - mysql
     state: present
   when: ansible_os_family == "RedHat"
