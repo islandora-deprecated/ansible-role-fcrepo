@@ -98,7 +98,7 @@ fcrepo_allowed_external_content:
 
 ## Dependencies
 
-* islandora.tomcat9
+* islandora.tomcat8
  
 ## Example Playbook
 
