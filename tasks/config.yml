@@ -7,7 +7,7 @@
   with_items:
     - claw.cnd
     - fcrepo-config.xml
-  notify: restart tomcat8
+  notify: restart tomcat9
 
 - name: Copy templated repository.json
   template:
@@ -15,7 +15,7 @@
     dest: "{{ fcrepo_home_dir }}/configs/repository.json"
     owner: "{{ fcrepo_user }}"
     group: "{{ fcrepo_user }}"
-  notify: restart tomcat8
+  notify: restart tomcat9
 
 - name: Copy fedora activemq configuration
   template:
@@ -23,7 +23,7 @@
     dest: "{{ fcrepo_config_dir }}/activemq.xml"
     owner: "{{ fcrepo_user }}"
     group: "{{ fcrepo_user }}"
-  notify: restart tomcat8
+  notify: restart tomcat9
 
 # ADDED by dbernstein
 - name: Template out allowed external content paths
@@ -32,4 +32,4 @@
     dest: "{{ fcrepo_allowed_external_content_file }}"
     owner: "{{ fcrepo_user }}"
     group: "{{ fcrepo_user }}"
-  notify: restart tomcat8
+  notify: restart tomcat9

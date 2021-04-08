@@ -42,8 +42,8 @@
 - name: Install python dependencies
   apt:
     pkg:
-      - python-psycopg2
-      - python-mysqldb
+      - python3-psycopg2
+      - python3-mysqldb
       - mysql-client 
     state: present
     update_cache: yes
